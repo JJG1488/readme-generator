@@ -1,20 +1,20 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-// function renderLicenseBadge(license) {
-//   console.log(license)
-//   if ('The MIT License') {
-//     return 'Mit license Badge'
-//   } else if ('The GPL License') {
-//     return 'GPL'
-//   } else if ('Apache License') {
-//     return 'Apache Badge'
-//   } else if ('GNU License') {
-//     return 'GNU Badge'
-//   } else {
-//     return 'N/A: No license selected'
-//   }
-//   ${renderLicenseBadge(data.license)}
-// }
+function renderLicenseBadge(license) {
+  console.log(license)
+  if ('The MIT License') {
+    return 'Mit license Badge'
+  } else if ('The GPL License') {
+    return 'GPL'
+  } else if ('Apache License') {
+    return 'Apache Badge'
+  } else if ('GNU License') {
+    return 'GNU Badge'
+  } else {
+    return ""
+  }
+
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -35,65 +35,78 @@ function renderLicenseLink(license) {
     return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
   } else {
     console.log(license);
-    return 'N/A: No license selected'
+    return " "
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-// function renderLicenseSection(license) {
-//   console.log(license)
-//   if ('The MIT License') {
-//     return 'Mit license'
-//   } else if ('The GPL License') {
-//     return 'GPL'
-//   } else if ('Apache License') {
-//     return 'Apache'
-//   } else if ('GNU License') {
-//     return 'GNU'
-//   } else {
-//     return ''
-//   }
-// }
+function renderLicenseSection(license) {
+  console.log(license)
+  if ('The MIT License') {
+    return 'Mit license'
+  } else if ('The GPL License') {
+    return 'GPL'
+  } else if ('Apache License') {
+    return 'Apache'
+  } else if ('GNU License') {
+    return 'GNU'
+  } else {
+    return " "
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+
   return `## ${data.title}
 
-  # Description
+# Description
 
-  ${data.description}
+${data.description}
 
-  ---
+---
 
-  ## Table of Contents
+# Preview
 
-  [description](${data.description})
-  [installation](${data.installation})
-  [usage](${data.usage})
-  [license](${data.license})
-  [contributors](${data.contributors})
-  [tests](${data.tests})
-  [questions](${data.questions})
+![Preview](./${data.photo})
+![Link] (https://${data.link})
 
-  ---
+---
 
-  # Installation
+## Table of Contents
 
-  ${data.installation}
+[Description of Application](#description)
 
-  ---
+[How to Install](#installation)
 
-  # Usage
+[How to Use](#usage)
 
-  ${data.usage}
+[License Coverage](#license)
 
-  ---
+[How to Contribute](#contributing)
+
+[How to Run Tests](#tests)
+
+[Contact Information](#questions)
+    
+---
+
+# Installation
+
+${data.installation}
+
+---
+
+ # Usage
+
+${data.usage}
+
+---
 
 # License
 
 ${renderLicenseLink(data.license)}
-
 
 ---
 
@@ -109,14 +122,16 @@ ${data.tests}
 
 ---
 
-## Questions
+# Questions
 
-${data.questions}
-
-# Email
 ${data.email}
 
+${data.github}
+
+${data.issues}
+
 `;
+
 }
 
 module.exports = generateMarkdown;
