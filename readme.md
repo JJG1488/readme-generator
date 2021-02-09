@@ -2,7 +2,7 @@
 
 # Description
 
-This application helps developers to focus on their current tasks by taking their focus off of creating a readme
+This application helps develpers to focus on their current tests by taking their focus off of creating a readme
 
 ---
 
