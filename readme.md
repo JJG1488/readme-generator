@@ -1,8 +1,9 @@
 ## readme
 
+---
 # Description
 
-This application helps develpers to focus on their current tests by taking their focus off of creating a readme
+This application helps developers to focus on their current tests by taking their focus off of creating a readme
 
 ---
 
@@ -59,8 +60,6 @@ You may fork over the repository, make changes and submit them, or contact me vi
 ---
 
 # Tests
-
-undefined
 
 ---
 
