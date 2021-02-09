@@ -8,8 +8,9 @@ This app was created to help build a professional readme to allow developers to 
 
 # Preview
 
-![Preview](./preview photo name goes here)
-![Link] (https://live link goes here)
+![Preview](./readme-generator.jpg)
+
+![Link] (https://jjg1488.github.io/readme-generator/)
 
 ---
 

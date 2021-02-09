@@ -70,6 +70,7 @@ ${data.description}
 # Preview
 
 ![Preview](./${data.photo})
+
 ![Link] (https://${data.link})
 
 ---
